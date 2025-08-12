@@ -1,0 +1,5 @@
+{
+    "[xaml]": {
+        "editor.defaultFormatter": "dabbinavo.xamlstyler"
+    }
+}

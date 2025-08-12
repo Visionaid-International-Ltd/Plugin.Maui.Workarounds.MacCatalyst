@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "dabbinavo.xamlstyler",
+    "davidanson.vscode-markdownlint",
+    "ms-dotnettools.dotnet-maui",
+    "visualstudioexptteam.vscodeintellicode"
+  ]
+}
