@@ -2,5 +2,5 @@
 
 partial class FeatureImplementation : IFeature
 {
-	// TODO Implement your Android specific code
+    // TODO Implement your Android specific code
 }

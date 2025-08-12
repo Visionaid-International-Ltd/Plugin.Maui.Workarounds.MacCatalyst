@@ -5,5 +5,5 @@
 /// </summary>
 public interface IFeature
 {
-	// TODO Define your plugin interface
+    // TODO Define your plugin interface
 }
