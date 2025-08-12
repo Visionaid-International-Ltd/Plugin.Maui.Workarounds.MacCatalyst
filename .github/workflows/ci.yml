@@ -25,7 +25,7 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }}
     
     - name: Install .NET MAUI Workload
-      run: dotnet workload restore samples\Plugin.Maui.Workarounds.MacCatalyst.Sample.sln
+      run: dotnet workload restore samples\Plugin.Maui.Workarounds.MacCatalyst.Sample.slnx
 
     - name: Build
-      run: dotnet build src\Plugin.Maui.Workarounds.MacCatalyst.sln -c Release
+      run: dotnet build src\Plugin.Maui.Workarounds.MacCatalyst.slnx -c Release
