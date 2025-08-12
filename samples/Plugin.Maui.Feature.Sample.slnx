@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../src/Plugin.Maui.Feature/Plugin.Maui.Feature.csproj" />
+  <Project Path="Plugin.Maui.Feature.Sample/Plugin.Maui.Feature.Sample.csproj">
+    <Deploy />
+  </Project>
+</Solution>
