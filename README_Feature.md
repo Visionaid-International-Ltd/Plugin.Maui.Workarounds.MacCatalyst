@@ -8,6 +8,7 @@ In case of GitHub there is required a raw URI of icon file - direct link to gith
 (Tip: to obtain raw URI, open the .png image file on GitHub page, click right mouse button on image and then select 'Open image in new tab')
 -->
 ![nuget.png](https://raw.githubusercontent.com/jfversluis/Plugin.Maui.Feature/main/nuget.png)
+
 # Plugin.Maui.Feature
 
 `Plugin.Maui.Feature` provides the ability to do this amazing thing in your .NET MAUI application.

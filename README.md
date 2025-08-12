@@ -48,6 +48,6 @@ As an example of all of this you can have a look at:
 
 If you want to publish your package to NuGet, you totally can! Included in this template are a couple of GitHub Actions. One of them goes of when you create a new tag with this pattern: `v1.0.0` or `v1.0.0-preview1`. Obviously the `1.0.0` part can be determined by you as you see fit, as long as you follow the pattern of 3 integers separated by dots.
 
-You will also want to set a secret for this repository which contains your NuGet API key. Follow the documentation on that [here](https://docs.github.com/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository), and add a secret with the key `NUGET_API_KEY` and value of your NuGet API key. The API key should be authorized to push a NuGet package with the given identifier. 
+You will also want to set a secret for this repository which contains your NuGet API key. Follow the documentation on that [here](https://docs.github.com/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository), and add a secret with the key `NUGET_API_KEY` and value of your NuGet API key. The API key should be authorized to push a NuGet package with the given identifier.
 
 From there, after [creating a GitHub release](https://docs.github.com/repositories/releasing-projects-on-github/managing-releases-in-a-repository) your plugin will be automatically released on NuGet!
