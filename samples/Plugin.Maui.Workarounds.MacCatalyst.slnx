@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../src/Plugin.Maui.Workarounds.MacCatalyst/Plugin.Maui.Workarounds.MacCatalyst.csproj" />
+  <Project Path="Plugin.Maui.Workarounds.MacCatalyst.Sample/Plugin.Maui.Workarounds.MacCatalyst.Sample.csproj">
+    <Deploy />
+  </Project>
+</Solution>
