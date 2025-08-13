@@ -5,5 +5,5 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Feature Plugin">
 
-    <!--  Add something that makes sense for your plugin here  -->
+    <CollectionView />
 </ContentPage>
