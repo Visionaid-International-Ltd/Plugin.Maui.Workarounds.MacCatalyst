@@ -45,7 +45,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\src\Plugin.Maui.Workarounds.MacCatalyst\Plugin.Maui.Workarounds.MacCatalyst.csproj" />
-	  <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<!-- <ProjectReference Include="..\..\src\Plugin.Maui.Workarounds.MacCatalyst\Plugin.Maui.Workarounds.MacCatalyst.csproj" /> -->
+		<ProjectReference Include="..\..\macios\Plugin.Maui.Workarounds.MacCatalyst.Binding\Plugin.Maui.Workarounds.MacCatalyst.Binding.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 	</ItemGroup>
 </Project>
