@@ -6,12 +6,7 @@
 		<Nullable>enable</Nullable>
 		<UseMaui>true</UseMaui>
 
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
-		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">15.0</SupportedOSPlatformVersion>
 
 		<!-- NuGet -->
 		<Authors>Jeremy Powell</Authors>
@@ -26,7 +21,7 @@
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<Title>.NET MAUI Mac Catalyst Workarounds Plugin</Title>
-		<Description>Plugin.Maui.Workarounds.MacCatalyst provides the ability to do this amazing thing in your .NET MAUI application.</Description>
+		<Description>Plugin.Maui.Workarounds.MacCatalyst provides workarounds for issues faced by .NET MAUI applications running on Mac Catalyst.</Description>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<DebugType>portable</DebugType>
@@ -37,6 +32,10 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="all" IsImplicitlyDefined="true" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="../../macios/Plugin.Maui.Workarounds.MacCatalyst.Binding/Plugin.Maui.Workarounds.MacCatalyst.Binding.csproj" />
 	</ItemGroup>
 
 	<!-- Package additions -->
