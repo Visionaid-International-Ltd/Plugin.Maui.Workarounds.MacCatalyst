@@ -10,6 +10,26 @@
       To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming
     -->
     <IsTrimmable>true</IsTrimmable>
+
+    <!-- NuGet -->
+    <Authors>Jeremy Powell</Authors>
+    <Copyright>Copyright © Jeremy Powell and contributors</Copyright>
+    <IsPackable>True</IsPackable>
+    <PackageProjectUrl>https://github.com/Visionaid-International-Ltd/Plugin.Maui.Workarounds.MacCatalyst</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Visionaid-International-Ltd/Plugin.Maui.Workarounds.MacCatalyst</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>dotnet-maui;maui;plugin;catalyst</PackageTags>
+    <IncludeSymbols>True</IncludeSymbols>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Title>.NET MAUI Mac Catalyst Workarounds Plugin</Title>
+    <Description>Plugin.Maui.Workarounds.MacCatalyst provides workarounds for issues faced by .NET MAUI applications running on Mac Catalyst.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <DebugType>portable</DebugType>
+    <!-- <PackageIcon>icon.png</PackageIcon> -->
+    <!-- <PackageReadmeFile>README.md</PackageReadmeFile> -->
   </PropertyGroup>
 
   <ItemGroup>

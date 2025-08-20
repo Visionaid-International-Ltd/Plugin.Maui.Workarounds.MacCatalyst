@@ -8,6 +8,8 @@
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 
+		<UseLocalNuget>true</UseLocalNuget>
+
 		<!-- Display name -->
 		<ApplicationTitle>Plugin.Maui.Workarounds.MacCatalyst.Sample</ApplicationTitle>
 
@@ -44,8 +46,12 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
-	<ItemGroup>
+	<ItemGroup Condition="'$(UseLocalNuget)' != 'true'">
 		<ProjectReference Include="..\..\src\Plugin.Maui.Workarounds.MacCatalyst\Plugin.Maui.Workarounds.MacCatalyst.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(UseLocalNuget)' == 'true'">
+		<PackageReference Include="Plugin.Maui.Workarounds.MacCatalyst" Version="1.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
