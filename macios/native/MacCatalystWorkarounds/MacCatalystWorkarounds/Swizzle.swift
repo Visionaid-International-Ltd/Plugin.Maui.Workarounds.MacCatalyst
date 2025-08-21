@@ -19,12 +19,12 @@ public func swizzleClassMethod(class aClass: AnyClass?, originalSelector: Select
 }
 
 private func swizzleMethod(class aClass: AnyClass?, originalSelector: Selector, swizzledSelector: Selector, isClassMethod: Bool) -> Bool {
-    
+
     guard var aClass = aClass else {
         assertionFailure("class not exist.")
         return false
     }
-    
+
     if isClassMethod {
         if let _class = NSStringFromClass(aClass).withCString(objc_getMetaClass) as? AnyClass {
             aClass = _class
@@ -32,7 +32,7 @@ private func swizzleMethod(class aClass: AnyClass?, originalSelector: Selector, 
             assertionFailure("meta class not found.")
         }
     }
-    
+
     guard let originalMethod = isClassMethod ? class_getClassMethod(aClass, originalSelector) : class_getInstanceMethod(aClass, originalSelector),
           let swizzledMethod = isClassMethod ? class_getClassMethod(aClass, swizzledSelector) : class_getInstanceMethod(aClass, swizzledSelector)
     else {

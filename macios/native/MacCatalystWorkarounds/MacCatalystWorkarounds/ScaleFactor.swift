@@ -45,7 +45,7 @@ public class MacCatalystWorkarounds : NSObject
         }
     }
 }
-    
+
 @objc extension NSObject {
     func swizzle_scaleFactor() -> CGFloat { 1 }
     func swizzle_scaleFactor2() -> CGFloat { 1 }
