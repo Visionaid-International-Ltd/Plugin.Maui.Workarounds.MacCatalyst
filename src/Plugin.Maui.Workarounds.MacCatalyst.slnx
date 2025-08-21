@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../macios/Plugin.Maui.Workarounds.MacCatalyst.Binding/Plugin.Maui.Workarounds.MacCatalyst.Binding.csproj" />
   <Project Path="Plugin.Maui.Workarounds.MacCatalyst/Plugin.Maui.Workarounds.MacCatalyst.csproj" />
 </Solution>
