@@ -15,6 +15,8 @@ Install with the dotnet CLI: `dotnet add package Plugin.Maui.Workarounds.MacCata
 ## API Usage
 
 ```csharp
+using Plugin.Maui.Workarounds.MacCatalyst;
+
 public class Program
 {
     // This is the main entry point of the application.
