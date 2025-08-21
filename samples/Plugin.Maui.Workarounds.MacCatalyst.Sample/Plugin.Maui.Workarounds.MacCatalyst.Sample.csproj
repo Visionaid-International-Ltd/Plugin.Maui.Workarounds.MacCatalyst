@@ -8,7 +8,8 @@
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 
-		<UseLocalNuget>true</UseLocalNuget>
+		<!-- Requires enabling package source in nuget.config -->
+		<UseLocalNuget>false</UseLocalNuget>
 
 		<!-- Display name -->
 		<ApplicationTitle>Plugin.Maui.Workarounds.MacCatalyst.Sample</ApplicationTitle>
