@@ -11,7 +11,7 @@ env:
 
 jobs:
   release-nuget:
-  
+
     runs-on: windows-latest
 
     steps:
@@ -37,6 +37,8 @@ jobs:
       - name: Pack
         run: dotnet pack src\Plugin.Maui.Workarounds.MacCatalyst.slnx -c Release -p:PackageVersion=${{ steps.get_version.outputs.version-without-v }}
       - name: Push
-        run: dotnet nuget push src\Plugin.Maui.Workarounds.MacCatalyst\bin\Release\Plugin.Maui.Workarounds.MacCatalyst.${{ steps.get_version.outputs.version-without-v }}.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+        run: |
+          dotnet nuget push macios\Plugin.Maui.Workarounds.MacCatalyst.Binding\bin\Release\Plugin.Maui.Workarounds.MacCatalyst.Binding.${{ steps.get_version.outputs.version-without-v }}.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+          dotnet nuget push src\Plugin.Maui.Workarounds.MacCatalyst\bin\Release\Plugin.Maui.Workarounds.MacCatalyst.${{ steps.get_version.outputs.version-without-v }}.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
         env:
           GITHUB_TOKEN: ${{ secrets.NUGET_API_KEY }}
