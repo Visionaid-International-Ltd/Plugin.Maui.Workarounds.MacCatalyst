@@ -5,8 +5,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Mac Catalyst Workarounds">
 
-    <Rectangle
-        BackgroundColor="Red"
-        HeightRequest="1080"
-        WidthRequest="1920" />
+    <VerticalStackLayout MaximumWidthRequest="1920" MaximumHeightRequest="1080" BackgroundColor="DarkGreen">
+        <Button Text="Focusable button" />
+        <Button Text="Another button" />
+        <Entry Placeholder="Entry control" />
+        <Entry Placeholder="Another entry control" />
+    </VerticalStackLayout>
+
 </ContentPage>

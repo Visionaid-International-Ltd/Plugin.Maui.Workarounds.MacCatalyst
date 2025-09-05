@@ -1,4 +1,5 @@
 using Foundation;
+using UIKit;
 
 namespace Plugin.Maui.Workarounds.MacCatalyst.Binding;
 
@@ -6,7 +7,7 @@ namespace Plugin.Maui.Workarounds.MacCatalyst.Binding;
 [BaseType(typeof(NSObject))]
 interface MacCatalystWorkarounds
 {
-    // +(NSString * _Nonnull)overrideCatalystScaleFactor:(NSString * _Nonnull)myString __attribute__((warn_unused_result("")));
+    // +(void)overrideCatalystScaleFactor;
     [Static]
     [Export("overrideCatalystScaleFactor")]
     void OverrideCatalystScaleFactor();
