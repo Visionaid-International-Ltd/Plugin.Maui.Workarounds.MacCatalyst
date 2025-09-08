@@ -1,9 +1,8 @@
 //
 //  Swizzle.swift
-//  ReaditLite
 //
 //  Created by Jeremy Powell on 18/08/2025.
-//  Copyright © 2025 Apple. All rights reserved.
+//  Original code by @JunyuKuang
 //
 
 import Foundation
