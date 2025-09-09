@@ -8,6 +8,7 @@ public static class MauiProgram
         builder
             .UseMauiApp<App>()
             .UseFocusableButtonHandler()
+            .UseFocusableSliderHandler()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
