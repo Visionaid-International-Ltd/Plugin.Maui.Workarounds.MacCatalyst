@@ -13,7 +13,7 @@ env:
 jobs:
   release-nuget:
 
-    runs-on: windows-latest
+    runs-on: macos-latest
 
     steps:
       - uses: actions/checkout@v5
@@ -24,7 +24,7 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Install .NET MAUI Workload
-        run: dotnet workload restore samples\Plugin.Maui.Workarounds.MacCatalyst.Sample.slnx
+        run: dotnet workload restore samples/Plugin.Maui.Workarounds.MacCatalyst.Sample.slnx
 
       # - name: Verify commit exists in origin/main
       #   run: |
@@ -38,11 +38,11 @@ jobs:
           "version-without-v=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
 
       - name: Pack
-        run: dotnet pack src\Plugin.Maui.Workarounds.MacCatalyst.slnx -c Release -p:PackageVersion=${{ steps.get_version.outputs.version-without-v }}
+        run: dotnet pack src/Plugin.Maui.Workarounds.MacCatalyst.slnx -c Release -p:PackageVersion=${{ steps.get_version.outputs.version-without-v }}
 
       - name: Push
         run: |
-          dotnet nuget push macios\Plugin.Maui.Workarounds.MacCatalyst.Binding\bin\Release\Plugin.Maui.Workarounds.MacCatalyst.Binding.${{ steps.get_version.outputs.version-without-v }}.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
-          dotnet nuget push src\Plugin.Maui.Workarounds.MacCatalyst\bin\Release\Plugin.Maui.Workarounds.MacCatalyst.${{ steps.get_version.outputs.version-without-v }}.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+          dotnet nuget push macios/Plugin.Maui.Workarounds.MacCatalyst.Binding/bin/Release/Plugin.Maui.Workarounds.MacCatalyst.Binding.${{ steps.get_version.outputs.version-without-v }}.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+          dotnet nuget push src/Plugin.Maui.Workarounds.MacCatalyst/bin/Release/Plugin.Maui.Workarounds.MacCatalyst.${{ steps.get_version.outputs.version-without-v }}.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
         env:
           GITHUB_TOKEN: ${{ secrets.NUGET_API_KEY }}
