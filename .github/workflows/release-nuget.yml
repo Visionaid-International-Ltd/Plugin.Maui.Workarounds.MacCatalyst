@@ -8,7 +8,7 @@ on:
     - "v[0-9]+.[0-9]+.[0-9]+-experimental.[0-9]+"
 
 env:
-  DOTNET_VERSION: '9.0.x' # The .NET SDK version to use
+  DOTNET_VERSION: '10.0.x' # The .NET SDK version to use
 
 jobs:
   release-nuget:
@@ -16,10 +16,10 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
