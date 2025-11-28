@@ -2,7 +2,7 @@
   "recommendations": [
     "dabbinavo.xamlstyler",
     "davidanson.vscode-markdownlint",
+    "github.copilot-chat",
     "ms-dotnettools.dotnet-maui",
-    "visualstudioexptteam.vscodeintellicode"
   ]
 }
