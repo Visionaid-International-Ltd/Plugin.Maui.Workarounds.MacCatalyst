@@ -38,7 +38,7 @@ jobs:
           "version-without-v=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
 
       - name: Pack
-        run: dotnet pack src/Plugin.Maui.Workarounds.MacCatalyst.slnx -c Release -p:PackageVersion=${{ steps.get_version.outputs.version-without-v }}
+        run: dotnet pack src/Plugin.Maui.Workarounds.MacCatalyst.slnx -c Release -p:PackageVersion=${{ steps.get_version.outputs.version-without-v }} -p:ContinuousIntegrationBuild=true
 
       - name: Push
         run: |
