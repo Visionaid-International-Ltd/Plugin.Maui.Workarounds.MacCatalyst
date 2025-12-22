@@ -16,7 +16,7 @@ Manager in Visual Studio.
 Mac Catalyst (and therefore MAUI) uses the "iPad idiom" by default, which scales down to 77% on macOS. This reduce
 detail and causes performance issues for Metal views etc.
 
-https://developer.apple.com/design/human-interface-guidelines/mac-catalyst#Choose-an-idiom
+<https://developer.apple.com/design/human-interface-guidelines/mac-catalyst#Choose-an-idiom>
 
 Unfortunately, `UIPickerView` and some other controls are not available when using the "Mac idiom" which means that
 the MAUI `Picker` control cannot be used.
@@ -26,7 +26,7 @@ using the "iPad idiom". *It is unclear whether this might constiture private API
 ineligible for App Store distrubution*. To that end the developer must determine the suitability of this package
 for their use and assumes all the risk - no warranty of any kind is provided.
 
-Upstream issue: https://github.com/dotnet/maui/issues/10622
+Upstream issue: <https://github.com/dotnet/maui/issues/10622>
 
 ### Handler for focusable Buttons to support keyboard navigation
 
