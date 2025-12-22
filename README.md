@@ -40,7 +40,7 @@ A workaround is provided via a MAUI handler that allows `UIButton`s to become fo
 The macios bindings have calls to `NSLog` for warning and debug messages. However, `NSLog` writes to `stderr` and so
 does not appear on the debug console (when debugging with VS Code for instance).
 
-A workaround is provided to redirect stderr to the debug console if desired.
+A workaround is provided to redirect stderr to the trace listeners if desired.
 
 ## Example usage
 
@@ -54,7 +54,7 @@ public class Program
     // This is the main entry point of the application.
     static void Main(string[] args)
     {
-        Workarounds.RedirectNSLogToDebugConsole();
+        Workarounds.RedirectNSLogToTrace();
 
         Workarounds.OverrideCatalystScaleFactor();
 

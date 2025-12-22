@@ -7,20 +7,20 @@ public static class Workarounds
 {
     public static void OverrideCatalystScaleFactor() => Binding.MacCatalystWorkarounds.OverrideCatalystScaleFactor();
 
-    public static void RedirectNSLogToDebugConsole() => Task.Run(RedirectNSLogToDebugConsoleAsync);
+    public static void RedirectNSLogToTrace() => Task.Run(RedirectNSLogToTraceAsync);
 
-    public static async Task RedirectNSLogToDebugConsoleAsync()
+    public static async Task RedirectNSLogToTraceAsync()
     {
         int[] fds = new int[2];
         if (pipe(fds) == -1)
         {
-            Debug.WriteLine("Failed to create pipe for NSLog redirection.");
+            Trace.WriteLine("Failed to create pipe for NSLog redirection.");
             return;
         }
 
         if (dup2(fds[1], 2) == -1)
         {
-            Debug.WriteLine("Failed to redirect stderr for NSLog redirection.");
+            Trace.WriteLine("Failed to redirect stderr for NSLog redirection.");
             return;
         }
 
@@ -30,7 +30,7 @@ public static class Workarounds
         string? line;
         while ((line = await sr.ReadLineAsync()) is not null)
         {
-            Debug.WriteLine($"[NSLog] {line}");
+            Trace.WriteLine($"[NSLog] {line}");
         }
     }
 
