@@ -39,6 +39,7 @@
 
   <ItemGroup>
     <XcodeProject Include="../native/MacCatalystWorkarounds/MacCatalystWorkarounds.xcodeproj">
+      <Configuration>$(Configuration)</Configuration>
       <SchemeName>MacCatalystWorkarounds</SchemeName>
     </XcodeProject>
   </ItemGroup>
